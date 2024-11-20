@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 14:45:30 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/19 18:43:10 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:39:46 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,19 @@
 # include <stdarg.h>
 
 # define BASE16 "0123456789abcdef"
+# define BASE16M "0123456789ABCDEF"
 
 int		ft_putnbr_fd(int n, int fd);
-int		ft_putchar_fd(char c, int fd);
+int		ft_putchar(char c);
 int		ft_putstr_fd(char *s, int fd);
-int		detect_format(char c, va_list args);
-void	ft_printf(const char *val, ...);
-int		ft_puthexanbr_fd(int n, int fd, char c);
+int		use_format(char c, va_list args);
+int		ft_printf(const char *val, ...);
+int		ft_puthexanbr_fd(size_t n, int fd, char c);
+int		ft_len_nbr(int n);
+int		ft_len_hexa(size_t n);
+int		ft_putnbr_u(unsigned long n, int fd);
+int		ft_len_nbru(unsigned long n);
+int		check_args(va_list args);
+int		hexa_p(void *n);
 
 #endif 

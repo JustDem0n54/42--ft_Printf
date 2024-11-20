@@ -1,6 +1,6 @@
 NAME	= libftprintf.a
 
-LIBC	= ft_printf.c ft_utilities.c
+LIBC	= ft_printf.c ft_utilities.c ft_len.c
 
 SRCS	= ${LIBC}
 
